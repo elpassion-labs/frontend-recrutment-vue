@@ -1,0 +1,57 @@
+Gihub issues app - exercise
+
+
+—————— Polski ——————
+
+Twoim zadaniem będzie zakodowanie szablonu aplikacji do pobierania issues z Github’a.
+Postaraj się jak najwierniej odtworzyć projekt aplikacji stosując się do zasady “pixel perfect”.
+
+Wymagania:
+- szablon musi zawierać wszystkie kluczowe elementy aplikacji: sidebar, nawigacja z filtrami,
+  główne okno z listą issues, przyciski systemowe
+- filtry w nawigacji powinny posiadać stan po najechaniu myszką oraz gdy są aktywne
+- gwiazdka w pojedynczym issue powinna być klikalna i zmieniać swój stan po kliknięciu (tak jak w projekcie)
+
+Zalecenia:
+- zwróć uwagę na właściwe użycie elementów HTML oraz styli CSS
+- zadbaj o odpowiednie nazwenictwo klas zgodnie w przyjętymi konwencjami
+- postaraj się stworzyć strukturę szablonu w taki sposób,
+  aby później łatwo było przenieść ją do rzeczywistej aplikacji
+- pisz komponentowo - elementy powinny być reużywalne
+- paska scroll nie musisz zmieniać!
+
+Projekt aplikacji: github-issues-app.psd
+Podgląd projektu: github-issues-app_preview.jpg
+
+Masz jakieś pytania? Pisz śmiało!
+
+Powodzenia!
+
+
+
+—————— English ——————
+
+Your task is to code template for Github issues application.
+Try to reproduce application design as much as you can, doing it in “pixel perfect” way.
+
+Requirements:
+- template needs to have all essential elements like: sidebar, navigation with filters,
+  main frame with issues list, OSX buttons
+- filter buttons in navigation should have hover and active state
+- the star in single issue bar needs to be clikable and change it’s state after click (as it is in design)
+
+Recommendations:
+- pay attention to proper usage of HTML elements and CSS styles
+- look to appropriate class naming according to known conventions
+- try to code template in such a way that it can be applied to real application
+- write code in component way - elements need to be reusable
+- you don’t need to change scrollbar!
+
+Design file: github-issues-app.psd
+Preview file: github-issues-app_preview.jpg
+
+Any questions? Feel free to contact us!
+
+Good luck!
+
+
