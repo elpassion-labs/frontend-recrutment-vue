@@ -1,12 +1,18 @@
 <template>
-  <div class="container">
-    <div class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <component :is="layout">
+    <router-view :layout.sync="layout"/>
+  </component>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+
+@Component
+export default class App extends Vue {
+  layout = 'div';
+};
+
+</script>
 
 <style lang="scss">
 @import 'styles/css-reset';
@@ -17,13 +23,10 @@ html {
 
 body {
   height: 100vh;
-}
-
-.container {
-  height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
   background-image: url(assets/background.jpg);
   background-size: cover;
   background-position: center top;
-  font-family: Helvetica, Arial, sans-serif;
+  background-repeat: no-repeat;
 }
 </style>
