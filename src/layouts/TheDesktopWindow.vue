@@ -16,22 +16,30 @@
 
 <style lang="scss" scope>
 .layout {
+  display: grid;
+  grid-template: "title-bar  content" 40px
+                 "navigation content" auto
+                 / 150px auto;
   width: 650px;
   height: 500px;
   margin: auto;
   margin-top: 250px;
   border-radius: 10px;
+  overflow: hidden;
 
   &__title-bar {
     background-color: green;
+    grid-area: title-bar;
   }
 
   &__navigation {
     background-color: blue;
+    grid-area: navigation;
   }
 
   &__content {
     background-color: yellow;
+    grid-area: content;
   }
 }
 </style>
