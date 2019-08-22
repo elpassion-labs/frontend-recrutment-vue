@@ -1,24 +1,24 @@
 <template>
-  <div class="layout">
-    <div class="layout__title-bar">
+  <div class="window">
+    <div class="window__title-bar">
       <div class="dot dot--red" />
       <div class="dot dot--yellow" />
       <div class="dot dot--green" />
     </div>
 
-    <nav class="layout__navigation">
+    <nav class="window__navigation">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
 
-    <main class="layout__content">
+    <main class="window__content">
       <slot/>
     </main>
   </div>
 </template>
 
 <style lang="scss" scope>
-.layout {
+.window {
   display: grid;
   grid-template: "title-bar  content" 40px
                  "navigation content" auto
