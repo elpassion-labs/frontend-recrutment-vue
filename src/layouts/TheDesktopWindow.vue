@@ -1,6 +1,9 @@
 <template>
   <div class="layout">
     <div class="layout__title-bar">
+      <div class="dot dot--red" />
+      <div class="dot dot--yellow" />
+      <div class="dot dot--green" />
     </div>
 
     <nav class="layout__navigation">
@@ -28,8 +31,9 @@
   overflow: hidden;
 
   &__title-bar {
-    background-color: green;
+    background-color: rgb(15, 16, 34);
     grid-area: title-bar;
+    padding: 16px 0 0 15px;
   }
 
   &__navigation {
@@ -40,6 +44,27 @@
   &__content {
     background-color: yellow;
     grid-area: content;
+  }
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+
+  &--red {
+    background-color: rgb(250, 94, 85);
+  }
+
+  &--yellow {
+    background-color: rgb(250, 191, 53);
+  }
+
+  &--green {
+    background-color: rgb(23, 203, 76);
   }
 }
 </style>
