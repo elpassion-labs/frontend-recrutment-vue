@@ -6,16 +6,26 @@
       <div class="dot dot--green" />
     </div>
 
-    <nav class="window__navigation">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <Navigation class="window__navigation"/>
 
     <main class="window__content">
       <slot/>
     </main>
   </div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import Navigation from '@/components/Navigation.vue';
+
+@Component({
+  components: {
+    Navigation
+  }
+})
+export default class TheDesktopWindow extends Vue { };
+
+</script>
 
 <style lang="scss" scope>
 .window {
