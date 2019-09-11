@@ -1,50 +1,66 @@
 <template>
   <nav>
     <ul class="navigation">
-      <li class="navigation__item">
-        <router-link to="/">
-          <span>
-            All
-          </span>
-          <span>
-            12
-          </span>
-        </router-link>
-      </li>
-
-      <li class="navigation__item">
-        <router-link to="/open">
-          <span>
-            Open
-          </span>
-          <span>
-            4
-          </span>
-        </router-link>
-      </li>
-
-      <li class="navigation__item">
-        <router-link to="/close">
-          <span>
-            Close
-          </span>
-          <span>
-            8
-          </span>
-        </router-link>
-      </li>
+      <NavigationItem
+        class="navigation__item"
+        v-bind="allNavigationItem"
+      />
+      <NavigationItem
+        class="navigation__item"
+        v-bind="openNavigationItem"
+      />
+      <NavigationItem
+        class="navigation__item"
+        v-bind="closeNavigationItem"
+      />
     </ul>
   </nav>
 </template>
+
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+import NavigationItem from '@/components/NavigationItem.vue';
+
+@Component({
+  components: {
+    NavigationItem,
+  },
+})
+export default class extends Vue {
+  @Prop({default: 12}) readonly all_count!: number
+  @Prop({default: 4}) readonly open_count!: number
+  @Prop({default: 8}) readonly close_count!: number
+
+  get allNavigationItem() {
+    return {
+      name: 'All',
+      link: '/',
+      count: this.all_count
+    }
+  }
+
+  get openNavigationItem() {
+    return {
+      name: 'Open',
+      link: '/open',
+      count: this.open_count
+    }
+  }
+
+  get closeNavigationItem() {
+    return {
+      name: 'Close',
+      link: '/close',
+      count: this.close_count
+    }
+  }
+}
+</script>
 
 <style scoped lang="scss">
 .navigation {
   &__item {
     height: 50px;
-
-    a {
-      color: black;
-    }
   }
 }
 </style>

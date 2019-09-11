@@ -6,10 +6,11 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import TheWindow from './layouts/TheWindow.vue';
 
 @Component
 export default class App extends Vue {
-  layout = 'div';
+  layout = TheWindow;
 };
 
 </script>

@@ -7,8 +7,8 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-import LayoutDefault from '../layouts/TheDesktopWindow.vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import TheWindow from '../layouts/TheWindow.vue';
 
 @Component({
   components: {
@@ -17,7 +17,7 @@ import LayoutDefault from '../layouts/TheDesktopWindow.vue';
 })
 export default class Home extends Vue {
   created() {
-    this.$emit('update:layout', LayoutDefault);
+    this.$emit('update:layout', TheWindow);
   }
 }
 </script>
