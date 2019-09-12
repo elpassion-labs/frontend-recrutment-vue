@@ -6,7 +6,7 @@
       <div class="dot dot--green" />
     </div>
 
-    <Navigation class="window__navigation"/>
+    <Navigation class="window__navigation" />
 
     <main class="window__content">
       <slot/>

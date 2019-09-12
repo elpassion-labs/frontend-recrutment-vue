@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component, Prop } from 'vue-property-decorator'
+import { Vue, Component, Prop, Watch } from 'vue-property-decorator'
 import NavigationItem from '@/components/NavigationItem.vue';
 
 @Component({
@@ -31,10 +31,14 @@ export default class extends Vue {
   @Prop({default: 4}) readonly open_count!: number
   @Prop({default: 8}) readonly close_count!: number
 
+  get base_url() {
+    return `/${this.$route.params.organization}/${this.$route.params.repository}`
+  }
+
   get allNavigationItem() {
     return {
       name: 'All',
-      link: '/',
+      link: `${this.base_url}`,
       count: this.all_count
     }
   }
@@ -42,7 +46,7 @@ export default class extends Vue {
   get openNavigationItem() {
     return {
       name: 'Open',
-      link: '/open',
+      link: `${this.base_url}/open`,
       count: this.open_count
     }
   }
@@ -50,7 +54,7 @@ export default class extends Vue {
   get closeNavigationItem() {
     return {
       name: 'Close',
-      link: '/close',
+      link: `${this.base_url}/close`,
       count: this.close_count
     }
   }
