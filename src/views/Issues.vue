@@ -68,8 +68,8 @@ export default class Issues extends Vue {
     return axios.get(`${url}?q=${query}`)
   }
 
-  private extract_issues(response) {
-    return response.data.items.map((issue) => {
+  private extract_issues(response:any) {
+    return response.data.items.map((issue:any) => {
       return {
         id: issue.id,
         title: issue.title
